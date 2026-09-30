@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>인텐포스</title>
+
+    <style>
+
+        /* 전체 */
+        body {
+            margin: 0;
+        }
+
+
+        /* 상단 헤더 */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            width: 100%;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            z-index: 2;
+
+            padding: 20px 50px;
+
+            box-sizing: border-box;
+        }
+
+
+        /* 로고 */
+        .logo {
+            color: white;
+        }
+
+
+        /* 가운데 메뉴 */
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+
+
+        /* 각각의 메뉴 묶음 */
+        .nav-item {
+            position: relative;
+        }
+
+
+        /* 상단 메뉴 글자 */
+        .menu {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+
+        /* 언어 선택 */
+        .language {
+            color: white;
+        }
+
+
+        /* 드롭다운 메뉴 */
+        .dropdown-menu {
+            display: none;
+
+            position: absolute;
+
+            top: 100%;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            padding: 10px 15px;
+
+            border-radius: 4px;
+
+            white-space: nowrap;
+
+            background-color: rgba(0, 0, 0, 0.8);
+
+            text-align: center;
+        }
+
+
+        /* 드롭다운 내부 글자 */
+        .dropdown-menu a {
+            display: block;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 6px 10px;
+
+            font-size: 14px;
+        }
+
+
+        /* 드롭다운 마우스 올렸을 때 */
+        .dropdown-menu a:hover {
+            color: #4db8ff;
+        }
+
+
+        /* 상단 메뉴에 마우스 올리면 드롭다운 표시 */
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+
+        /* 히어로 */
+        .hero {
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 100vh;
+
+            overflow: hidden;
+
+            background-color: lightgray;
+        }
+
+
+        /* 히어로 영상 */
+        .hero-video {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        /* 히어로 글자 */
+        .hero-text {
+            position: relative;
+
+            z-index: 1;
+
+            color: rgb(9, 122, 154);
+
+            font-size: 30px;
+
+            text-align: center;
+        }
+
+        /* 모바일 화면 */
+@media (max-width: 768px) {
+
+    .header {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .nav {
+        gap: 10px;
+    }
+
+    .menu {
+        font-size: 12px;
+    }
+
+    .language {
+        font-size: 12px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- 상단 헤더 -->
+    <div class="header">
+
+
+        <!-- 로고 -->
+        <div class="logo">
+            인텐포스
+        </div>
+
+
+        <!-- 메뉴 -->
+        <div class="nav">
+
+
+            <!-- 1. 회사소개 -->
+            <div class="nav-item">
+
+                <a class="menu" href="#">
+                    회사소개
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="#">기업개요</a>
+                    <a href="#">CEO 인사말</a>
+                    <a href="#">오시는길</a>
+                </div>
+
+            </div>
+
+
+            <!-- 2. 제품소개 -->
+            <div class="nav-item">
+
+                <a class="menu" href="#">
+                    제품소개
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="#">저압전동기</a>
+                    <a href="#">고압전동기</a>
+                    <a href="#">인버터</a>
+                    <a href="#">서보모터</a>
+                    <a href="#">감속기</a>
+                </div>
+
+            </div>
+
+
+            <!-- 3. 기술자료 -->
+            <div class="nav-item">
+
+                <a class="menu" href="#">
+                    기술자료
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="#">카달로그</a>
+                    <a href="#">메뉴얼</a>
+                    <a href="#">도면 다운로드</a>
+                </div>
+
+            </div>
+
+
+            <!-- 4. 고객센터 -->
+            <div class="nav-item">
+
+                <a class="menu" href="#">
+                    고객센터
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="#">공지사항</a>
+                    <a href="#">제품문의</a>
+                    <a href="#">A/S안내</a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- 언어 -->
+        <div class="language">
+            KOR | ENG
+        </div>
+
+
+    </div>
+
+
+    <!-- 히어로 -->
+    <div class="hero">
+
+
+        <!-- 영상 -->
+        <video
+            class="hero-video"
+            src="hero.mp4"
+            autoplay
+            muted
+            loop
+            playsinline>
+        </video>
+
+
+        <!-- 히어로 문구 -->
+        <div class="hero-text">
+
+            <h1>
+                Motion for a Better Tomorrow<br>
+                더 나은 내일을 향한 기술의 움직임, 인텐포스
+            </h1>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
